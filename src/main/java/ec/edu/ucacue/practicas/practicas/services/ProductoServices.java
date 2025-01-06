@@ -22,4 +22,16 @@ public class ProductoServices {
         return productoRepository.save(producto);
     }
 
+    public Producto obtenerProductoPorId(Integer id) {
+        return productoRepository.findById(id).get();
+    }
+
+    public void eliminarProductoPorId(Integer id) {
+        productoRepository.deleteById(id);
+    }
+
+    public Producto actualizarProducto(Producto producto) {
+        return productoRepository.save(producto);
+    }
+
 }
